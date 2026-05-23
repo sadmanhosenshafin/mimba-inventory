@@ -5,7 +5,6 @@ import Link from "next/link";
 import {
   CircleDollarSign,
   Download,
-  PackageMinus,
   Search,
   X,
   ReceiptText,

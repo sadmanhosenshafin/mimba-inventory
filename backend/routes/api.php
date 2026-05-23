@@ -50,7 +50,7 @@ Route::middleware('auth:sanctum')->group(function (): void {
     Route::get('/reports/export/pdf', [ReportController::class, 'exportPdf']);
 });
 
-Route::prefix('v1')->middleware('auth:sanctum')->group(function (): void {
+Route::prefix('v1')->name('v1.')->middleware('auth:sanctum')->group(function (): void {
     Route::get('/activities', [ActivityController::class, 'index']);
     Route::apiResource('customers', CustomerController::class)->only(['index', 'store', 'show', 'update', 'destroy']);
     Route::get('/expenses/summary', [ExpenseController::class, 'summary']);

@@ -164,7 +164,7 @@ export default function ReturnsPage() {
       setHistoryPage(1);
       await Promise.all([refreshSales(), refreshProducts(), loadReturns()]);
       notifyBusinessDataChanged();
-    } catch (caught) {
+    } catch {
       setError("পণ্য ফেরত সেভ করা যায়নি। তথ্য ঠিক আছে কিনা দেখুন।");
     } finally {
       setIsSubmitting(false);
